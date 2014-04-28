@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99F46ADD-4706-4ED9-BEBB-A8A2A8D4B2FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpMap.Forms</RootNamespace>
+    <AssemblyName>SharpMap.UI.Extensions</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <TargetProfile>Client</TargetProfile>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BruTile">
+      <HintPath>packages\BruTile.0.7.4.4\lib\net40\BruTile.dll</HintPath>
+    </Reference>
+    <Reference Include="BruTile.Desktop">
+      <HintPath>packages\BruTile.0.7.4.4\lib\net40\BruTile.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="BruTile.MbTiles">
+      <HintPath>packages\BruTile.0.7.4.4\lib\net40\BruTile.MbTiles.dll</HintPath>
+    </Reference>
+    <Reference Include="BruTile.Serialization">
+      <HintPath>packages\BruTile.0.7.4.4\lib\net40\BruTile.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>packages\Common.Logging.2.0.0\lib\2.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoAPI">
+      <HintPath>packages\GeoAPI.1.7.2\lib\net403-client\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony">
+      <HintPath>packages\Irony.0.9.0-net40\lib\net40\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite">
+      <HintPath>packages\NetTopologySuite.1.13.2\lib\net403-client\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.GeoTools">
+      <HintPath>packages\NetTopologySuite.IO.1.13.2\lib\net403-client\NetTopologySuite.IO.GeoTools.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.MsSqlSpatial">
+      <HintPath>packages\NetTopologySuite.IO.1.13.2\lib\net403-client\NetTopologySuite.IO.MsSqlSpatial.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.PostGis">
+      <HintPath>packages\NetTopologySuite.IO.1.13.2\lib\net403-client\NetTopologySuite.IO.PostGis.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>packages\NetTopologySuite.1.13.2\lib\net403-client\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjNet">
+      <HintPath>packages\ProjNET4GeoAPI.1.3.0.3\lib\net403-client\ProjNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpMap">
+      <HintPath>packages\SharpMap.1.1.0\lib\net40-client\SharpMap.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpMap.UI">
+      <HintPath>packages\SharpMap.UI.1.1.0\lib\net40-client\SharpMap.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>packages\System.Data.SQLite.MSIL.1.0.86.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>packages\System.Data.SQLite.MSIL.1.0.86.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Base\Arrow.cs" />
+    <Compile Include="Controls\Base\EnhancedComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\MarkerAlignment.cs" />
+    <Compile Include="Controls\Base\MathUtility.cs" />
+    <Compile Include="Controls\Base\Slider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\CmykColor.cs" />
+    <Compile Include="Controls\Color\ColorBlendControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorCell.cs" />
+    <Compile Include="Controls\Color\ColorCellBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorCellList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorCellMatrix.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorCellStyle.cs" />
+    <Compile Include="Controls\Color\ColorCellWheel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorChannel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorChannel.designer.cs">
+      <DependentUpon>ColorChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Color\ColorChannelType.cs" />
+    <Compile Include="Controls\Color\ColorComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorComponentEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorComponentEditor.designer.cs">
+      <DependentUpon>ColorComponentEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Color\ColorExtensions.cs" />
+    <Compile Include="Controls\Color\ColorListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorListBox.designer.cs">
+      <DependentUpon>ColorListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Color\ColorLists.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorLists.designer.cs">
+      <DependentUpon>ColorLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Color\ColorModel.cs" />
+    <Compile Include="Controls\Color\ColorSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Color\ColorSelector.designer.cs">
+      <DependentUpon>ColorSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Color\HlsColor.cs" />
+    <Compile Include="Controls\Palette\PaletteBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Palette\PaletteItem.cs" />
+    <Compile Include="Controls\Palette\PaletteItemList.cs" />
+    <Compile Include="Controls\Palette\PaletteSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Pens\DashEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Pens\DashEditor.Designer.cs">
+      <DependentUpon>DashEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Provider\DefinitionQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Provider\DefinitionQueryControl.Designer.cs">
+      <DependentUpon>DefinitionQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Provider\IronyDefinitionQueryParser.cs" />
+    <Compile Include="Controls\Provider\ProviderSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Provider\ProviderSetting.Designer.cs">
+      <DependentUpon>ProviderSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Color\ColorBlendControl.resx">
+      <DependentUpon>ColorBlendControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Color\ColorCellBase.resx">
+      <DependentUpon>ColorCellBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Color\ColorCellWheel.resx">
+      <DependentUpon>ColorCellWheel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Color\ColorChannel.resx">
+      <DependentUpon>ColorChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Color\ColorComponentEditor.resx">
+      <DependentUpon>ColorComponentEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Color\ColorLists.resx">
+      <DependentUpon>ColorLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Color\ColorSelector.resx">
+      <DependentUpon>ColorSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Provider\DefinitionQueryControl.resx">
+      <DependentUpon>DefinitionQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Provider\ProviderSetting.resx">
+      <DependentUpon>ProviderSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\Brushes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
